@@ -1,0 +1,50 @@
+K run harsh - -image=nginx
+K get pods
+Kget pod harsh -o wide
+K describe pod harsh
+K logs harsh
+K exec -it harsh - -  /bin/bash
+
+K get pods - -all-namespaces
+
+K create deployment harsh - -image=harsh
+K expose deployment harsh - -port=80 - -type=NodePort
+K scale deployment harsh - -replicas=3
+K describe deployment harsh
+K delete deployment harsh
+
+DOCKER 
+
+docker pull nginx
+Docker run -d –name harsh -p 8081:80 nginx
+Docker ps
+Docker stop harsh
+
+Html.index
+
+<!DOCTYPE html>
+<html>
+<head><title>My Docker Site</title></head>
+<body>
+<h1>Hello from Dockerized Website!</h1>
+<p>This is deployed using Play with Docker.</p>
+</body>
+</html>' 
+Dockerfile create
+
+Docker build -t harsh .
+
+Docker run -d -p 8080:80 –name webserver harsh
+
+
+//
+docker --version
+docker pull hello-world
+docker images
+
+docker ps -a
+docker rmi hello-world
+
+docker rm 459cbd189844
+docker rmi ubuntu
+
